@@ -43,15 +43,29 @@ body {
 	border-bottom: 1px solid $medium-gray;
 	border-right: 1px solid $medium-gray;
 	height: 120px;
-/*	margin-right: 0;
-*/	text-align: center;
+	position: relative;
+	text-align: center;
 }
 
-.play-logo > .fa-play-circle-o {
+.artist-image {
+	height: 120px;
+	max-width: 120px;
+	position: absolute;
+	right: 25%;
+	z-index: 0;
+}
+
+.play-logo > .fa-play-circle-o,
+.play-logo > .fa-pause {
 	color: $light-gray;
 	font-size: 5em;
 	line-height: 120px;
 	margin: auto;
+	z-index: 100;
+}
+
+.play-logo > .fa-pause {
+	display: none;
 }
 
 .play-logo > .fa-play-circle-o:hover {

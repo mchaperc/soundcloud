@@ -3,9 +3,9 @@
 </form>
 <div class="media-player-container">
 	<div class="play-logo">
-		<img src="{{song.artwork_url}}" alt="">
-		<i class="fa fa-play-circle-o"></i>
-		<i class="fa pause"></i>
+		<img class="artist-image" src="{{song.artwork_url}}" alt="">
+		<i class="fa fa-play-circle-o" {{action "playSong" media-player}}></i>
+		<i class="fa fa-pause" {{action "pauseSong" media-player}}></i>
 	</div>
 	<div class="playback-container">
 		<div class="artist-info">
@@ -21,11 +21,11 @@
 			</div>
 		</div>
 		<ul class="song-status">
-			<li class="song-status-time-current">0:00</li>
+			<li class="song-status-time-current">{{current_time}}</li>
 			<li class="song-status-bar">
 				<button class="song-status-bar-slider"></button>
 			</li>
-			<li class="song-status-time-left">0:00</li>
+			<li class="song-status-time-left">{{time_left}}</li>
 		</ul>
 	</div>
 	<ul class="song-info-container">
