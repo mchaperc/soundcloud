@@ -2,6 +2,15 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' connect.soundcloud.com",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' cdnjs.cloudflare.com maxcdn.bootstrapcdn.com",
+      'media-src': "'self'"
+    },
     modulePrefix: 'soundcloud',
     environment: environment,
     baseURL: '/',
