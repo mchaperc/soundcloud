@@ -68,18 +68,17 @@ export default Ember.Component.extend({
 				this.set('sound', sound);
 			  	this.sound.play();
 			  	var ms = this.sound._player._currentPosition,
-				   min = Math.floor(ms/1000/60),
-				   sec = ('0' +(ms/1000) % 60).slice(-2);
-			  	this.set('current_time', ''+min + ':' + sec);
-			  	var ms = this.sound._player._duration - this.sound._player._currentPosition,
-				   min = Math.floor(ms/1000/60),
-				   sec = Math.floor(('0' +(ms/1000) % 60).slice(-2));
-			  	this.set('time_left', ''+min + ':' + sec);
+					   min = Math.floor(ms/1000/60),
+					   sec = ('0' +(ms/1000) % 60).slice(-2);
+				  	this.set('current_time', ''+min + ':' + sec);
+				  	var ms = this.sound._player._duration - this.sound._player._currentPosition,
+					   min = Math.floor(ms/1000/60),
+					   sec = Math.floor(('0' +(ms/1000) % 60).slice(-2));
+				  	this.set('time_left', ''+min + ':' + sec);
 			}.bind(this));
 			$('.play-logo > .fa-play-circle-o').hide();
 			$('.play-logo > .fa-pause').show();
 			this.set('haveSong', true);
-			
 		}
 	}
 
