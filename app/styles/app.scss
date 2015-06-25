@@ -57,10 +57,11 @@ body {
 
 .play-logo > .fa-play-circle-o,
 .play-logo > .fa-pause {
-	color: $light-gray;
+	color: rgba(175,175,175,.8);
 	font-size: 5em;
+	left: 37%;
 	line-height: 120px;
-	margin: auto;
+	position: absolute;
 	z-index: 100;
 }
 
@@ -68,7 +69,8 @@ body {
 	display: none;
 }
 
-.play-logo > .fa-play-circle-o:hover {
+.play-logo > .fa-play-circle-o:hover,
+.play-logo > .fa-pause:hover {
 	cursor: pointer;
 }
 

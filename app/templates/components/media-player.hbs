@@ -11,10 +11,10 @@
 		<div class="artist-info">
 			<div class="volume-controls">
 				<i class="fa fa-volume-up"></i>
-				<i class="fa fa-caret-down"></i>
-				<i class="fa fa-caret-up"></i>
+				<i class="fa fa-caret-down" {{action "volumeDown" media-player}}></i>
+				<i class="fa fa-caret-up" {{action "volumeUp" media-player}}></i>
 			</div>
-			<i class="fa fa-repeat"></i>
+			<i class="fa fa-repeat" {{action "replay" media-player}}></i>
 			<div class="artist-info-text">
 				<p class="artist-info-text-artist">{{song.user.username}}</p>
 				<p class="artist-info-text-song">{{song.title}}</p>
